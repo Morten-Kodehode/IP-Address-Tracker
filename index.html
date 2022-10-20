@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="assets/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>IP Adress Tracker</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <div class="ipContainer flex flex-center">
+        <h1>IP Adress Tracker</h1>
+        <input
+          type="search"
+          name="searchBar"
+          id="searchBar"
+          class="inputStyle"
+        />
+        <div class="ipStatsCard flex flex-center">
+          <div class="stat">
+            <p class="statName">IP ADRESS</p>
+            <span id="ipLocation">192.212.174.101</span>
+          </div>
+          <div class="stat">
+            <p class="statName">LOCATION</p>
+            <span id="ipLocation">Brooklyn, NY 10001</span>
+          </div>
+          <div class="stat">
+            <p class="statName">TIMEZONE</p>
+            <span id="ipLocation">UTC -05:00</span>
+          </div>
+          <div class="stat">
+            <p class="statName">ISP</p>
+            <span id="ipLocation">SpaceX Starlink</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Map -->
+    <div id="map"></div>
+  </body>
+</html>
