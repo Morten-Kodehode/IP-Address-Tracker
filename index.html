@@ -17,15 +17,20 @@
     <div class="header">
       <div class="ipContainer flex flex-center">
         <h1>IP Adress Tracker</h1>
-        <input
-          type="search"
-          name="searchBar"
-          id="searchBar"
-          class="inputStyle"
-        />
+        <div class="search">
+          <input
+            type="search"
+            name="searchBar"
+            id="searchBar"
+            class="inputStyle"
+          />
+          <button id="searchBtn"><img src="assets/icon-arrow.svg" /></button>
+        </div>
         <div class="ipStatsCard flex flex-center">
           <div class="stat">
-            <p class="statName">IP ADRESS</p>
+            <div>
+              <p class="statName">IP ADRESS</p>
+            </div>
             <span id="ipLocation">192.212.174.101</span>
           </div>
           <div class="stat">

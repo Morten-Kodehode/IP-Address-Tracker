@@ -1,6 +1,7 @@
 @use "../utility" as *;
 @use "../abstracts" as *;
 
+// Header Image
 .header {
   background: url(../../assets/pattern-bg.png) no-repeat center/cover;
 
@@ -9,7 +10,20 @@
   }
 
   @include breakpoint-up(medium) {
-    height: 25vh;
+    height: 30vh;
+  }
+}
+
+// Map Div
+#map {
+  background-color: gray;
+
+  @include breakpoint-down(small) {
+    height: 65vh;
+  }
+
+  @include breakpoint-up(medium) {
+    height: 70vh;
   }
 }
 
@@ -19,11 +33,50 @@
 
   & > h1 {
     color: white;
-    margin: 25px 0;
+    margin-top: 25px;
   }
 
-  & > input {
-    margin: 25px 0;
+  @include breakpoint-up(large) {
+    margin: 0 250px;
+  }
+}
+
+// SearchBar
+.search {
+  margin: 25px 0;
+  width: calc(100% - 25px);
+}
+
+.inputStyle {
+  position: relative;
+  height: 58px;
+  width: 100%;
+  border-radius: 15px;
+  border: none;
+  color: $primaryColor;
+  font-size: 1.125rem;
+  padding-left: 25px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+#searchBtn {
+  position: absolute;
+  right: 12px;
+  background-color: black;
+  height: 58px;
+  border-radius: 0 15px 15px 0;
+  border: none;
+  cursor: pointer;
+
+  & > img {
+    margin: 15px;
+  }
+
+  @include breakpoint-up(large) {
+    right: 262px;
   }
 }
 
@@ -36,18 +89,29 @@
   width: calc(100% - 25px);
   filter: drop-shadow(0 50px 50px #00000080);
   padding: 25px;
+
+  @include breakpoint-up(medium) {
+    flex-direction: row;
+    text-align: center;
+  }
 }
 
 // Stat divs inside StatsCard
 .stat {
+  & p {
+    color: $secondaryColor;
+    margin-bottom: 10px;
+  }
+
+  & span {
+    color: $primaryColor;
+  }
   @include breakpoint-down(small) {
     & p {
+      text-align: center;
       font-size: 0.625rem;
       font-weight: 700;
       letter-spacing: 1.46px;
-      color: $secondaryColor;
-      text-align: center;
-      margin-bottom: 5px;
     }
 
     & span {
@@ -60,6 +124,22 @@
 
     &:not(:last-child) {
       margin-bottom: 25px;
+    }
+  }
+
+  @include breakpoint-up(medium) {
+    & p {
+      text-align: left;
+      font-size: 0.75rem;
+    }
+
+    & span {
+      text-align: left;
+      font-size: 1.2rem;
+    }
+    &:not(:first-child) {
+      border-left: 2px solid $secondaryColor;
+      padding-left: calc(50px);
     }
   }
 }
