@@ -3,6 +3,8 @@
 
 // Header Image
 .header {
+  position: relative;
+  z-index: 999;
   background: url(../../assets/pattern-bg.png) no-repeat center/cover;
 
   @include breakpoint-down(small) {
@@ -16,8 +18,6 @@
 
 // Map Div
 #map {
-  background-color: gray;
-
   @include breakpoint-down(small) {
     height: 65vh;
   }
@@ -83,7 +83,6 @@
 // Card that contains stats
 .ipStatsCard {
   flex-direction: column;
-  justify-content: space-between;
   background-color: white;
   border-radius: 15px;
   width: calc(100% - 25px);
@@ -92,12 +91,14 @@
 
   @include breakpoint-up(medium) {
     flex-direction: row;
-    text-align: center;
+    align-items: center;
   }
 }
 
 // Stat divs inside StatsCard
 .stat {
+  padding: 0 20px;
+
   & p {
     color: $secondaryColor;
     margin-bottom: 10px;
@@ -128,6 +129,8 @@
   }
 
   @include breakpoint-up(medium) {
+    width: 25%;
+    height: 50%;
     & p {
       text-align: left;
       font-size: 0.75rem;
@@ -137,9 +140,8 @@
       text-align: left;
       font-size: 1.2rem;
     }
-    &:not(:first-child) {
-      border-left: 2px solid $secondaryColor;
-      padding-left: calc(50px);
+    &:not(:last-child) {
+      border-right: 1px solid $secondaryColor;
     }
   }
 }

@@ -20,6 +20,8 @@ body {
 }
 
 .header {
+  position: relative;
+  z-index: 999;
   background: url(../../assets/pattern-bg.png) no-repeat center/cover;
 }
 @media (max-width: 39.9375em) {
@@ -33,9 +35,6 @@ body {
   }
 }
 
-#map {
-  background-color: gray;
-}
 @media (max-width: 39.9375em) {
   #map {
     height: 65vh;
@@ -99,7 +98,6 @@ body {
 
 .ipStatsCard {
   flex-direction: column;
-  justify-content: space-between;
   background-color: white;
   border-radius: 15px;
   width: calc(100% - 25px);
@@ -109,10 +107,13 @@ body {
 @media (min-width: 40em) {
   .ipStatsCard {
     flex-direction: row;
-    text-align: center;
+    align-items: center;
   }
 }
 
+.stat {
+  padding: 0 20px;
+}
 .stat p {
   color: hsl(0deg, 0%, 59%);
   margin-bottom: 10px;
@@ -139,6 +140,10 @@ body {
   }
 }
 @media (min-width: 40em) {
+  .stat {
+    width: 25%;
+    height: 50%;
+  }
   .stat p {
     text-align: left;
     font-size: 0.75rem;
@@ -147,8 +152,7 @@ body {
     text-align: left;
     font-size: 1.2rem;
   }
-  .stat:not(:first-child) {
-    border-left: 2px solid hsl(0deg, 0%, 59%);
-    padding-left: 50px;
+  .stat:not(:last-child) {
+    border-right: 1px solid hsl(0deg, 0%, 59%);
   }
 }/*# sourceMappingURL=main.css.map */

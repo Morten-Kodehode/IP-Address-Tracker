@@ -9,6 +9,17 @@
       href="assets/favicon-32x32.png"
       type="image/x-icon"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+      integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+      integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+      crossorigin=""
+    ></script>
     <link rel="stylesheet" href="css/main.css" />
     <title>IP Adress Tracker</title>
   </head>
@@ -23,32 +34,32 @@
             name="searchBar"
             id="searchBar"
             class="inputStyle"
+            placeholder="Enter IP Address or click button to see your address"
           />
           <button id="searchBtn"><img src="assets/icon-arrow.svg" /></button>
         </div>
         <div class="ipStatsCard flex flex-center">
           <div class="stat">
-            <div>
-              <p class="statName">IP ADRESS</p>
-            </div>
-            <span id="ipLocation">192.212.174.101</span>
+            <p class="statName">IP ADRESS</p>
+            <span id="adress">Search...</span>
           </div>
           <div class="stat">
             <p class="statName">LOCATION</p>
-            <span id="ipLocation">Brooklyn, NY 10001</span>
+            <span id="city">Search...</span>
           </div>
           <div class="stat">
             <p class="statName">TIMEZONE</p>
-            <span id="ipLocation">UTC -05:00</span>
+            <span id="timezone">Search...</span>
           </div>
           <div class="stat">
             <p class="statName">ISP</p>
-            <span id="ipLocation">SpaceX Starlink</span>
+            <span id="isp">Search...</span>
           </div>
         </div>
       </div>
     </div>
     <!-- Map -->
     <div id="map"></div>
+    <script src="js/script.js"></script>
   </body>
 </html>
