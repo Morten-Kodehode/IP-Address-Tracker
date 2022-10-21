@@ -22,7 +22,7 @@ body {
 .header {
   position: relative;
   z-index: 999;
-  background: url("assets/pattern-bg.png") no-repeat center/cover;
+  background: url("../../assets/pattern-bg.png") no-repeat center/cover;
 }
 @media (max-width: 39.9375em) {
   .header {
