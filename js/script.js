@@ -27,7 +27,7 @@ const map = L.map("map", {
 
 // Custom Marker
 const customIcon = L.icon({
-  iconUrl: "/assets/icon-location.svg",
+  iconUrl: "assets/icon-location.svg",
   iconSize: [25, 35],
   iconAnchor: [22, 94],
 });
