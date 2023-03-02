@@ -32,6 +32,7 @@ const customIcon = L.icon({
   iconAnchor: [22, 94],
 });
 
+// Fetch data from api
 getStats = () => {
   fetch(`${apiUrlBase}${apiSearchParam}${apiKey}&ipAddress=${searchResults}`)
     .then((res) => res.json())
@@ -50,7 +51,15 @@ getStats = () => {
     });
 };
 
-searchBtn.addEventListener("click", () => {
+// Search functionality to use mouse click and keypress to display information
+function handleSearch() {
   searchResults = search.value;
   getStats();
+}
+
+searchBtn.addEventListener("click", handleSearch);
+search.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    handleSearch();
+  }
 });
